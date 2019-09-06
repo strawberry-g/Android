@@ -21,15 +21,13 @@ public class CheckBoxActivity extends AppCompatActivity {
         cb5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                boolean isChecked = false;
-                Toast.makeText(CheckBoxActivity.this,isChecked?"选中":"未选中",Toast.LENGTH_SHORT).show();
+                Toast.makeText(CheckBoxActivity.this,b?"选中":"未选中",Toast.LENGTH_SHORT).show();
             }
         });
         cb6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                boolean isChecked = false;
-                Toast.makeText(CheckBoxActivity.this,isChecked?"选中":"未选中",Toast.LENGTH_SHORT).show();
+                Toast.makeText(CheckBoxActivity.this,b?"选中":"未选中",Toast.LENGTH_SHORT).show();
             }
         });
     }
