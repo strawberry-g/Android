@@ -5,6 +5,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
     <Button
+            android:id="@+id/btn_bdyx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="百度一下"
+            android:textAllCaps="false">
+    </Button>
+
+    <Button
             android:id="@+id/btn_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +49,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CheckBox"
+            android:textAllCaps="false">
+    </Button>
+
+    <Button
+            android:id="@+id/btn_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ImageView"
+            android:textAllCaps="false">
+    </Button>
+
+    <Button
+            android:id="@+id/btn_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ListView"
             android:textAllCaps="false">
     </Button>
 </LinearLayout>
