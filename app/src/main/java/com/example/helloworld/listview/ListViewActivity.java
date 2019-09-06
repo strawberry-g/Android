@@ -35,6 +35,7 @@ public class ListViewActivity extends AppCompatActivity {
         myLV1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //i：记录当前点击的是第几个item
                 Toast.makeText(ListViewActivity.this,"长按 i:"+i,Toast.LENGTH_SHORT).show();
                 //false会弹出两个事件提醒
                 return true;
