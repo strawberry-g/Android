@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listview.ListViewActivity;
 
 //应用程序文件，将被转化为Dalvik可执行文件并运行
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button myCheckBox;
     private Button myImgView;
     private Button myListView;
+    private Button myGridV;
 
     //onCreate方法activity创建时调用，是一个activity声明周期的开始
     //Bundle类型的数据与Map类型的数据相似，都是以key-value的形式存储数据的。
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         //指定当前Activity的布局文件为res/layout/activity_main.xml
         //gen/com.example.helloworld/R.java文件是活动的Java文件（如MainActivity.java）和资源（如strings.xml）之间的胶水。
         //这是一个自动生成的文件，不要修改R.java文件的内容
+        //活动类从项目的res/layout中的XML文件加载所有的UI组件
         setContentView(R.layout.activity_main);
 
         //找到空间
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         myBd = findViewById(R.id.btn_bdyx);
         myImgView = findViewById(R.id.btn_img_view);
         myListView = findViewById(R.id.btn_list_view);
+        myGridV = findViewById(R.id.btn_grid_view);
         setOnClickListeners();
     }
 
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         myImgView.setOnClickListener(onClick);
         myBd.setOnClickListener(onClick);
         myListView.setOnClickListener(onClick);
+        myGridV.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -90,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_list_view:
                     //跳转到ListView演示页面
                     intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.btn_grid_view:
+                    //跳转到GridView演示页面
+                    intent = new Intent(MainActivity.this, GridViewActivity.class);
                     break;
             }
             startActivity(intent);

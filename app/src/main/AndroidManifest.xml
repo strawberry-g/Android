@@ -4,12 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <!--android:icon属性指出位于res/drawable-hdpi下面的应用程序图标-->
-    <!--android:name属性指定一个Activity类子类的全名-->
-    <!--android:label属性指定用于活动名称的字符串。可以使用标签来指定多个活动
-        @string/app_name指的是定义在strings.xml中的app_name，实际为"HelloWorld"-->
-    <!-- 每个activity都要注册 -->
-    <!-- MainActivity设置为默认启动的activity -->
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -17,6 +11,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".gridview.GridViewActivity">
+        </activity>
         <activity android:name=".listview.ListViewActivity">
         </activity>
         <activity android:name=".ImageViewActivity">
@@ -32,11 +28,11 @@
         <activity android:name=".TextViewActivity">
         </activity>
         <activity android:name=".MainActivity">
-
             <intent-filter>
-                <!--意图过滤器的action被命名为android.intent.action.MAIN，表明这个活动被用做应用程序的入口-->
+
+                <!-- 意图过滤器的action被命名为android.intent.action.MAIN，表明这个活动被用做应用程序的入口 -->
                 <action android:name="android.intent.action.MAIN"/>
-                <!--意图过滤器的category被命名为android.intent.category.LAUNCHER，表明应用程序可以通过设备启动器的图标来启动-->
+                <!-- 意图过滤器的category被命名为android.intent.category.LAUNCHER，表明应用程序可以通过设备启动器的图标来启动 -->
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

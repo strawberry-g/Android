@@ -14,6 +14,7 @@ import com.example.helloworld.R;
 public class MyListAdapter extends BaseAdapter {
 
     private Context context;
+    //LayoutInflater（布局填充器）
     private LayoutInflater layoutInflater;
 
     public MyListAdapter(Context context) {
@@ -45,7 +46,8 @@ public class MyListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder = null;
         if (view == null){
-            //视图绑定
+            //视图绑定 inflate:第一个参数：想要添加的布局、第二个参数：想要添加到哪个布局上面
+            //null和有值的区别 null时第一个参数中最外层的布局大小无效，有值的时候最外层的布局大小有效
             view = layoutInflater.inflate(R.layout.layout_listitem,null);
             viewHolder = new ViewHolder();
             viewHolder.imageView = view.findViewById(R.id.lv_iv);
@@ -56,14 +58,15 @@ public class MyListAdapter extends BaseAdapter {
         }
         else {
             viewHolder = (ViewHolder) view.getTag();
-            //给控件tv1,tv2,tv3,imageView赋值
-            viewHolder.tv1.setText("标题");
-            viewHolder.tv2.setText("2019-9-6");
-            viewHolder.tv3.setText("星期五");
-            Glide.with(context)
-                    .load("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567746977975&di=ba396fb0f357c745161f97e37ea10d92&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F04%2F20180704215302_vjlpa.jpg")
-                    .into(viewHolder.imageView);
         }
+        //给控件tv1,tv2,tv3,imageView赋值
+        viewHolder.tv1.setText("标题");
+        viewHolder.tv2.setText("2019-9-6");
+        viewHolder.tv3.setText("星期五");
+        Glide.with(context)
+                .load("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567746977975&di=ba396fb0f357c745161f97e37ea10d92&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F04%2F20180704215302_vjlpa.jpg")
+                .into(viewHolder.imageView);
+
         return view;
     }
 }
