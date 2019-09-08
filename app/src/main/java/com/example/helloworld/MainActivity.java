@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listview.ListViewActivity;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button myImgView;
     private Button myListView;
     private Button myGridV;
+    private Button myTest;
 
     //onCreate方法activity创建时调用，是一个activity声明周期的开始
     //Bundle类型的数据与Map类型的数据相似，都是以key-value的形式存储数据的。
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         myImgView = findViewById(R.id.btn_img_view);
         myListView = findViewById(R.id.btn_list_view);
         myGridV = findViewById(R.id.btn_grid_view);
+        myTest = findViewById(R.id.btn_test);
         setOnClickListeners();
     }
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         myBd.setOnClickListener(onClick);
         myListView.setOnClickListener(onClick);
         myGridV.setOnClickListener(onClick);
+        myTest.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -99,6 +103,18 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_grid_view:
                     //跳转到GridView演示页面
                     intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn_test:
+                    //跳转到测试页面
+                    intent = new Intent(MainActivity.this, TestActivity.class);
+                    //传递数据包Bundle
+                    /*Bundle b = new Bundle();
+                    b.putString("name","Android");
+                    b.putInt("age",18);
+                    intent.putExtras(b);*/
+                    //第二种intent.putExtra("data",b)
+
+                    intent.putExtra("user",new User("Android",20));
                     break;
             }
             startActivity(intent);

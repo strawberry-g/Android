@@ -44,11 +44,13 @@ public class MyGridAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
 
         if (view == null){
+            //获取view的布局
             view = layoutInflater.inflate(R.layout.layout_gridview_item,null);
 
             viewHolder = new ViewHolder();
             viewHolder.imageView = view.findViewById(R.id.gv_img);
             viewHolder.textView = view.findViewById(R.id.gv_tv);
+            //View中的setTag(Object)表示给View添加一个格外的数据，以后可以用getTag()将这个数据取出来
             view.setTag(viewHolder);
         }
         else{
