@@ -8,10 +8,10 @@
 
     <ImageView
             android:id="@+id/gv_img"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
             android:background="@color/colorPeachPuff"
-            android:scaleType="centerCrop">
+            android:scaleType="fitCenter">
     </ImageView>
 
     <TextView

@@ -21,7 +21,7 @@ public class MyGridAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 9;
+        return 12;
     }
 
     @Override
@@ -34,9 +34,9 @@ public class MyGridAdapter extends BaseAdapter {
         return 0;
     }
 
-    static class ViewHolder{
-        private ImageView imageView;
-        private TextView textView;
+    class ViewHolder{
+        ImageView imageView;
+        TextView textView;
     }
 
     @Override
