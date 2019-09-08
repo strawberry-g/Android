@@ -16,6 +16,7 @@ public class ButtonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button);
+
         //找到空间
         btn_3 = findViewById(R.id.btn_3);
         btn_3.setOnClickListener(new View.OnClickListener() {

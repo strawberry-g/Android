@@ -13,9 +13,8 @@ import com.example.helloworld.R;
 //视图适配器
 public class MyListAdapter extends BaseAdapter {
 
-    private Context context;
-    //LayoutInflater（布局填充器）
-    private LayoutInflater layoutInflater;
+    private Context context;//context上下文
+    private LayoutInflater layoutInflater;//LayoutInflater（布局填充器）
 
     public MyListAdapter(Context context) {
         this.context = context;
@@ -37,6 +36,8 @@ public class MyListAdapter extends BaseAdapter {
         return 0;
     }
 
+    //通过ViewHolder找到具体holder，将结果返回给视图
+    //创建ViewHolder目的：要把一个itemView中的控件抽取成一个Object
     static class ViewHolder{
         public ImageView imageView;
         public TextView tv1,tv2,tv3;
@@ -54,9 +55,11 @@ public class MyListAdapter extends BaseAdapter {
             viewHolder.tv1 = view.findViewById(R.id.lv_tv1);
             viewHolder.tv2 = view.findViewById(R.id.lv_tv2);
             viewHolder.tv3 = view.findViewById(R.id.lv_tv3);
+            //存储view的数据 setTag()是把Object对象作为参数对view进行存储的
             view.setTag(viewHolder);
         }
         else {
+            //第二次使用的时候就可以通过getTag()把holder取出来直接使用
             viewHolder = (ViewHolder) view.getTag();
         }
         //给控件tv1,tv2,tv3,imageView赋值

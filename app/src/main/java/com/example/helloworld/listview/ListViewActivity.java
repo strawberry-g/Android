@@ -16,6 +16,7 @@ public class ListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
+
         myLV1 = findViewById(R.id.lv_1);
 
         //声明适配器，视图调用适配器

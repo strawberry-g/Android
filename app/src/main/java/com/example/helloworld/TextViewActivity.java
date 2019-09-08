@@ -22,6 +22,7 @@ public class TextViewActivity extends AppCompatActivity {
         myTextView4 = findViewById(R.id.tv_4);
         myTextView5 = findViewById(R.id.tv_5);
         myTextView6 = findViewById(R.id.tv_6);
+
         //中划线
         myTextView4.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
         //去除锯齿
