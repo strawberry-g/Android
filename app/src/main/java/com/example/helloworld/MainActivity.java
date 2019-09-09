@@ -6,9 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listview.ListViewActivity;
 import com.example.helloworld.recyclerview.RecyclerViewActivity;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
+
+import java.util.List;
 
 //应用程序文件，将被转化为Dalvik可执行文件并运行
 public class MainActivity extends AppCompatActivity {

@@ -31,6 +31,7 @@ public class LinearRecyclerViewActivity extends AppCompatActivity {
         @Override
         public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
             super.getItemOffsets(outRect, view, parent, state);
+            //在下面加分割线
             outRect.set(0,0,0,getResources().getDimensionPixelOffset(R.dimen.dividerHeight));
         }
     }
